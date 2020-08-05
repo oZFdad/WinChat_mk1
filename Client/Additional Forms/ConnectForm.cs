@@ -12,6 +12,8 @@ namespace Client
 {
     internal class ConnectForm : Form
     {
+        private TcpClient _connect;
+        
         private Button _btConnect; // кнока подключения
         private Button _btClose; // кнопка закрытия окна
 
@@ -21,8 +23,9 @@ namespace Client
         private TextBox _tbIPAdr;// поле ввода ip
         private TextBox _tbPort;// поле ввода порта
 
-        public ConnectForm()
+        public ConnectForm(TcpClient connect)
         {
+            _connect = connect;
             InitializeComponent();
         }
 
@@ -111,16 +114,24 @@ namespace Client
 
         private void _btConnectClick (object sender, EventArgs e)
         {
-            TcpClient client = null;
             var name = "TestName";
 
             try
             {
-                client = new TcpClient(_tbIPAdr.Text, Convert.ToInt32(_tbPort.Text));
-                var stream = client.GetStream();
+                _connect = new TcpClient(_tbIPAdr.Text, Convert.ToInt32(_tbPort.Text));
+                var stream = _connect.GetStream();
 
                 var message = $"{name}: test message!";
-                Thread.Sleep(10000);
+                
+                byte[] data = Encoding.Unicode.GetBytes(message);
+                stream.Write(data, 0, data.Length);
+                
+                Thread.Sleep(4000);
+                
+                message = "Close";
+                
+                data = Encoding.Unicode.GetBytes(message);
+                stream.Write(data, 0, data.Length);
             }
             catch
             {
@@ -128,10 +139,8 @@ namespace Client
             }
             finally
             {
-                client.Close();
-                this.Close();
+                Close();
             }
-            MessageBox.Show("Типа подключаемся");
         }
 
         private void _btCloseClick (object sender, EventArgs e)

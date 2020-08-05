@@ -31,16 +31,26 @@ namespace Logic
                     
                     var builder = new StringBuilder();
                     var bytes = 0;
-                    do
+                    while (stream.DataAvailable)
                     {
                         bytes = stream.Read(data, 0, data.Length);
                         builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
                     }
-                    while (stream.DataAvailable);
+
+                    
 
                     string message = builder.ToString();
 
-                    _service.Pull(message);
+                    if (message != "")
+                    {
+                        _service.Pull(message);
+                    }
+
+                    if (message == "Close")
+                    {
+                        _client.Close();
+                        Console.WriteLine("Client disconnect");
+                    }
                 }
             }
             catch (Exception ex)

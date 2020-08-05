@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace Client
 {
     public partial class ChatClient : Form
     {
+        private TcpClient _connect;
         public ChatClient()
         {
             InitializeComponent();
@@ -19,13 +21,13 @@ namespace Client
 
         private void btConnect_Click(object sender, EventArgs e)
         {
-            var connectForm = new ConnectForm();
+            var connectForm = new ConnectForm(_connect);
             connectForm.Show();
         }
 
         private void btCreateChat_Click(object sender, EventArgs e)
         {
-
+            var a = 0;
         }
 
         private void btJoinChat_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace Client
 
         private void ChatClient_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //Завершение работы формы
+            
         }
     }
 }

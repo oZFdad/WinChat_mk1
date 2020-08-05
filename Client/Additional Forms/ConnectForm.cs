@@ -126,12 +126,12 @@ namespace Client
                 byte[] data = Encoding.Unicode.GetBytes(message);
                 stream.Write(data, 0, data.Length);
                 
-                Thread.Sleep(4000);
-                
-                message = "Close";
-                
-                data = Encoding.Unicode.GetBytes(message);
-                stream.Write(data, 0, data.Length);
+                //Thread.Sleep(4000);
+                //
+                //message = "Close";
+                //
+                //data = Encoding.Unicode.GetBytes(message);
+                //stream.Write(data, 0, data.Length);
             }
             catch
             {

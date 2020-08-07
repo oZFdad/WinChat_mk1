@@ -6,8 +6,8 @@ namespace Client
     internal class ConnectForm : Form
     {
 
-        public delegate void Connecntandler(string ip, int port);
-        public event Connecntandler connect;
+        public delegate void ConnecntHandler(string ip, int port);
+        public event ConnecntHandler connect;
 
         private Button _btConnect; // кнока подключения
         private Button _btClose; // кнопка закрытия окна

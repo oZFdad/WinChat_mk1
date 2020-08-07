@@ -16,6 +16,7 @@ namespace Server
     {
         static void Main(string[] args)
         {
+            var process = new Process();
             TcpListener listener = null;
             try
             {
@@ -27,6 +28,8 @@ namespace Server
                 {
                     TcpClient client = listener.AcceptTcpClient();
                     var userConnect = new UserConnect(client, new TXTTest());
+                    
+                    //process.AddConnect
 
 
                     Thread clientThread = new Thread(new ThreadStart(userConnect.Process));

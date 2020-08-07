@@ -10,8 +10,13 @@ namespace ConnectStorage
 
         internal ConnectInChats()
         {
-            _name = "No name";
+            _name = "";
             _userConnects = new List<UserConnect>();
+        }
+
+        public ConnectInChats(string name)
+        {
+            _name = name;
         }
 
         internal void CreateUser(UserConnect userConnect)

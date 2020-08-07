@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{BB98CA57-7920-481A-B070-583AD6222E12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectStorage", "ConnectStorage\ConnectStorage.csproj", "{56F48C84-A3B4-4134-85D6-65B1B858F56D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectStorageDll", "ConnectStorageDll\ConnectStorageDll.csproj", "{56F48C84-A3B4-4134-85D6-65B1B858F56D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

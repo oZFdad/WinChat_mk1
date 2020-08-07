@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConnectStorageDll\ConnectStorageDll.csproj">
+      <Project>{56f48c84-a3b4-4134-85d6-65b1b858f56d}</Project>
+      <Name>ConnectStorageDll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logic\Logic.csproj">
       <Project>{84bcb510-91e8-4802-8343-46f0a5ecdbcc}</Project>
       <Name>Logic</Name>

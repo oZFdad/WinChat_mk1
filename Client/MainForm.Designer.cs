@@ -23,8 +23,8 @@
         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -153,21 +153,20 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChatClient_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
-        #endregion
-
+        private System.Windows.Forms.Button btAuthorization;
         private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.Button btCreateChat;
+        private System.Windows.Forms.Button btInvite;
         private System.Windows.Forms.Button btJoinChat;
-        private System.Windows.Forms.Button btSendMess;
         private System.Windows.Forms.Button btQuitChat;
+        private System.Windows.Forms.Button btRegisteration;
+        private System.Windows.Forms.Button btSendMess;
         private System.Windows.Forms.TextBox tbChatMessage;
         private System.Windows.Forms.TextBox tbSendMessage;
-        private System.Windows.Forms.Button btInvite;
-        private System.Windows.Forms.Button btRegisteration;
-        private System.Windows.Forms.Button btAuthorization;
+
+        #endregion
     }
 }
 

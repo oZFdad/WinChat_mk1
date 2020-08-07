@@ -41,10 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserConnect.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConnectStorageDll\ConnectStorageDll.csproj">
+      <Project>{56f48c84-a3b4-4134-85d6-65b1b858f56d}</Project>
+      <Name>ConnectStorageDll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Messages\Messages.csproj">
       <Project>{bb98ca57-7920-481a-b070-583ad6222e12}</Project>
       <Name>Messages</Name>

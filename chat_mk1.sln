@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{BB98CA57-7920-481A-B070-583AD6222E12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectStorage", "ConnectStorage\ConnectStorage.csproj", "{56F48C84-A3B4-4134-85D6-65B1B858F56D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BB98CA57-7920-481A-B070-583AD6222E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB98CA57-7920-481A-B070-583AD6222E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB98CA57-7920-481A-B070-583AD6222E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F48C84-A3B4-4134-85D6-65B1B858F56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F48C84-A3B4-4134-85D6-65B1B858F56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F48C84-A3B4-4134-85D6-65B1B858F56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F48C84-A3B4-4134-85D6-65B1B858F56D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

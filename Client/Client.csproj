@@ -78,6 +78,15 @@
     <EmbeddedResource Include="Additional Forms\ConnectForm.resx">
       <DependentUpon>ConnectForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Additional Forms\CreatChatForm.resx">
+      <DependentUpon>CreatChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional Forms\InviteForm.resx">
+      <DependentUpon>InviteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Additional Forms\JoinChatForm.resx">
+      <DependentUpon>JoinChatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Additional Forms\RegisterationForm.resx">
       <DependentUpon>RegisterationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +114,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Messages\Messages.csproj">
+      <Project>{bb98ca57-7920-481a-b070-583ad6222e12}</Project>
+      <Name>Messages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

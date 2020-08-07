@@ -15,7 +15,6 @@ namespace Services.TXTServices
         public void Pull(string message)
         {
             Console.WriteLine(message);
-            Console.WriteLine("message catch");
         }
     }
 }

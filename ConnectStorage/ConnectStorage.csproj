@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{84BCB510-91E8-4802-8343-46F0A5ECDBCC}</ProjectGuid>
+    <ProjectGuid>{56F48C84-A3B4-4134-85D6-65B1B858F56D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Logic</RootNamespace>
-    <AssemblyName>Logic</AssemblyName>
+    <RootNamespace>ConnectStorage</RootNamespace>
+    <AssemblyName>ConnectStorage</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,17 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectInChats.cs" />
+    <Compile Include="ConnectStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserConnect.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Messages\Messages.csproj">
-      <Project>{bb98ca57-7920-481a-b070-583ad6222e12}</Project>
-      <Name>Messages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Services\Services.csproj">
-      <Project>{21a7ee35-741e-4940-b89d-7f1cdf217a19}</Project>
-      <Name>Services</Name>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{84bcb510-91e8-4802-8343-46f0a5ecdbcc}</Project>
+      <Name>Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

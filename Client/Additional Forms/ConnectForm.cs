@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Client
 {
     internal class ConnectForm : Form
     {
-        private TcpClient _connect;
-        
+
+        public delegate void Connecntandler(string ip, int port);
+        public event Connecntandler connect;
+
         private Button _btConnect; // кнока подключения
         private Button _btClose; // кнопка закрытия окна
 
@@ -23,9 +18,8 @@ namespace Client
         private TextBox _tbIPAdr;// поле ввода ip
         private TextBox _tbPort;// поле ввода порта
 
-        public ConnectForm(TcpClient connect)
+        public ConnectForm()
         {
-            _connect = connect;
             InitializeComponent();
         }
 
@@ -114,38 +108,13 @@ namespace Client
 
         private void _btConnectClick (object sender, EventArgs e)
         {
-            var name = "TestName";
-
-            try
-            {
-                _connect = new TcpClient(_tbIPAdr.Text, Convert.ToInt32(_tbPort.Text));
-                var stream = _connect.GetStream();
-
-                var message = $"{name}: test message!";
-                
-                byte[] data = Encoding.Unicode.GetBytes(message);
-                stream.Write(data, 0, data.Length);
-                
-                //Thread.Sleep(4000);
-                //
-                //message = "Close";
-                //
-                //data = Encoding.Unicode.GetBytes(message);
-                //stream.Write(data, 0, data.Length);
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                Close();
-            }
+            connect?.Invoke(_tbIPAdr.Text, Convert.ToInt32(_tbPort.Text));
+            Close();
         }
 
         private void _btCloseClick (object sender, EventArgs e)
         {
-            this.Close();
+           Close();
         }
     }
 }
